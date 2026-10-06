@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RA AC Services | AC Service at Your Doorstep</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#102033;background:#f5f9fc}
+header{background:#0877c9;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:700}.call{color:white;text-decoration:none;font-weight:700}
+.hero{padding:70px 6%;background:linear-gradient(135deg,#e7f5ff,#fff);text-align:center}
+.hero h1{font-size:42px;margin:0 0 15px}.hero p{font-size:20px;margin:0 0 25px}
+.btn{display:inline-block;background:#0877c9;color:white;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:700;margin:5px}
+.whatsapp{background:#16a34a}
+section{padding:45px 6%;max-width:1100px;margin:auto}
+h2{text-align:center;font-size:30px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:white;padding:24px;border-radius:15px;box-shadow:0 4px 18px #00000012}
+.card h3{margin-top:0}.booking{background:white;border-radius:16px;padding:25px;max-width:650px;margin:auto;box-shadow:0 4px 18px #00000012}
+input,select,textarea{width:100%;padding:13px;margin:8px 0 14px;border:1px solid #ccd6df;border-radius:8px;font-size:16px}
+button{border:0;cursor:pointer;background:#0877c9;color:white;padding:14px 20px;border-radius:9px;font-size:16px;font-weight:700;width:100%}
+footer{text-align:center;background:#102033;color:white;padding:25px}
+@media(max-width:600px){.hero h1{font-size:32px}.logo{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">❄️ RA AC Services</div>
+<a class="call" href="tel:+919121093703">📞 91210 93703</a>
+</header>
+
+<div class="hero">
+<h1>AC Problem? We Come to You.</h1>
+<p>AC installation, repair & service at your doorstep.</p>
+<a class="btn" href="tel:+919121093703">Call Now</a>
+<a class="btn whatsapp" href="https://wa.me/919121093703" target="_blank">WhatsApp</a>
+</div>
+
+<section>
+<h2>Our Services</h2>
+<div class="services">
+<div class="card"><h3>❄️ AC Installation</h3><p>Professional split AC installation.</p></div>
+<div class="card"><h3>🔧 AC Repair</h3><p>AC not cooling or other faults? We can help.</p></div>
+<div class="card"><h3>🧰 AC Service</h3><p>Regular cleaning and maintenance.</p></div>
+<div class="card"><h3>⛽ Gas Charging</h3><p>AC gas checking and charging service.</p></div>
+<div class="card"><h3>🔍 Leak Testing</h3><p>Refrigerant leak checking and repair.</p></div>
+<div class="card"><h3>⚡ Electrical Fault</h3><p>Basic AC electrical fault diagnosis.</p></div>
+</div>
+</section>
+
+<section>
+<h2>Book a Service</h2>
+<div class="booking">
+<form onsubmit="bookWhatsApp(event)">
+<label>Name</label><input id="name" required>
+<label>Phone</label><input id="phone" type="tel" required>
+<label>Service</label>
+<select id="service">
+<option>AC Installation</option><option>AC Repair</option><option>AC Service</option>
+<option>Gas Charging</option><option>Leak Testing</option><option>Electrical Fault</option>
+</select>
+<label>Address</label><textarea id="address" rows="3" required></textarea>
+<label>Problem</label><textarea id="problem" rows="3"></textarea>
+<button type="submit">Book on WhatsApp</button>
+</form>
+</div>
+</section>
+
+<section style="text-align:center">
+<h2>Service Area</h2>
+<p>Hyderabad</p>
+<a class="btn" href="tel:+919121093703">Call 91210 93703</a>
+<a class="btn whatsapp" href="https://wa.me/919121093703" target="_blank">WhatsApp Us</a>
+</section>
+
+<footer>© 2026 RA AC Services • AC Installation, Repair & Service</footer>
+
+<script>
+function bookWhatsApp(e){
+ e.preventDefault();
+ const msg=`RA AC Services Booking%0AName: ${encodeURIComponent(document.getElementById('name').value)}%0APhone: ${encodeURIComponent(document.getElementById('phone').value)}%0AService: ${encodeURIComponent(document.getElementById('service').value)}%0AAddress: ${encodeURIComponent(document.getElementById('address').value)}%0AProblem: ${encodeURIComponent(document.getElementById('problem').value)}`;
+ window.open('https://wa.me/919121093703?text='+msg,'_blank');
+}
+</script>
+</body>
+</html>
